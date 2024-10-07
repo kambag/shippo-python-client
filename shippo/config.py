@@ -10,6 +10,7 @@ class Configuration:
         self.api_base: str = os.environ.get('SHIPPO_API_BASE', 'https://api.goshippo.com/')
         self.api_key: str = os.environ.get('SHIPPO_API_KEY')
         self.api_version: str = os.environ.get('SHIPPO_API_VERSION', '2018-02-08')
+        self.account_id: str = None
 
         self.app_name: str = os.environ.get('APP_NAME', '')
         self.app_version: str = os.environ.get('APP_VERSION', '')

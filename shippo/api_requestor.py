@@ -145,6 +145,9 @@ class APIRequestor(object):
             'Shippo-API-Version': config.api_version
         }
 
+        if config.account_id:
+            headers["SHIPPO-ACCOUNT-ID"] = config.account_id
+
         rbody, rcode = self._client.request(
             method, abs_url, headers, post_data)
         util.logger.info(
